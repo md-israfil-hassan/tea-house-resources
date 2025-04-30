@@ -1,4 +1,13 @@
+// Log Out Btn section
 
+document.getElementById('log-out-btn').addEventListener('click', function(event){
+event.preventDefault()
+ window.location.href ='/login.html'
+
+})
+
+//Card Section 
+// first Card 
 document.getElementById('first-order-btn').addEventListener('click', function(){
 
     const accountBalance = document.getElementById('account-balance').innerText ;
