@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+<!-- Tailwindcss whit DaisyUI -->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+    <!-- font Awsome -->
+    <script src="https://kit.fontawesome.com/6c2c9a2d71.js" crossorigin="anonymous"></script>
+
+    <title>Tea House</title>
+    <!-- tailwind custom Color -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'gradient-start': '#FF8938',
+                'gradient-start': '#F00',
+               
+              }
+            }
+          }
+        }
+      </script>
+    <style>
+.font-manrope{
+    font-family: "Manrope", sans-serif;
+}
+
+    </style>
+
+</head>
+<body class="font-manrope ">
+  
+  <!-- navbr section -->
+<nav>
+  <div class=" fixed top-0 z-30 px-5 flex justify-between lg:px-16 navbar bg-slate-200 lg:py-5 ">
+    <div class=" flex gap-4 py-2 px-3 bg-slate-100 rounded-2xl">
+      <a class=" text-sm lg:text-2xl font-bold"> Account Balance </a>
+      <a  class=" lg:text-2xl bg-white rounded-xl px-2 font-extrabold"> <span id="account-balance">1000</span> <i class=" text-yellow-500 fa-solid fa-coins"></i> </a>
+    </div>
+    <div class="">
+      <div class="dropdown dropdown-end">
+        <div tabindex="0" role="button">
+          <div class="indicator">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 lg:h-8 lg:w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /> </svg>
+            <span id="add-products" class="badge badge-sm indicator-item">0</span>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</nav>
+
+<!-- navbr section End -->
+    <header class="container pt-10 mx-auto">
+        <div class=" my-20 px-10 ">
+            <div class="flex justify-between items-center flex-col lg:flex-row ">
+              <div>
+                <h1 class="text-5xl font-extrabold">It's good <br>tea time at The <br>Tea House</h1>
+                <p class="py-6">Tea and Botanical Solutions Supplier Give Optimum Satisfaction To Your Taste Buds.
+                </p>
+                <button class="btn bg-gradient-to-r from-indigo-300 via-purple-400 to-pink-300 ... text-white text-lg font-bold">Explore More <i class="fa-solid fa-arrow-trend-up"></i></button>
+              </div>
+<div>
+    <img class="max-w-sm"
+    src="images/banner.png" />
+<!-- reting badge -->
+<div class="-mt-16 flex items-center gap-4 drop-shadow-lg bg-white p-2 w-52 rounded-lg">
+    <i class="fa-solid fa-star text-3xl text-amber-400"></i>
+<div>
+    <h3 class="text-3xl">5.00</h3>
+    <p>Trust Pilot Ratings</p>
+</div>
+
+</div>
+</div>
+            </div>
+          </div>
+    </header>
+<main class=" lg:px-10">
+<!-- featured section -->
+<section class="text-center my-24">
+<h2 class="text-5xl font-extrabold mb-5">Our Featured Products</h2>
+<p class="max-w-3xl mx-auto mb-15">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+<!-- feature tea card container -->
+ <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+
+<!-- first card -->
+<div class="card bg-gradient-to-r from-[#F4F4F4]to-[#F4F4F4]  shadow-xl p-8">
+    <figure>
+      <img class=""
+        src="images/tea-1.png" />
+    </figure>
+    <div class="card-body justify-center">
+      <h2 class=" text-2xl font-bold">Milk Tea</h2>
+      <p>Creamer could be replaced by fresh milk</p>
+
+      <!-- Open the modal using ID.showModal() method -->
+<button id="first-order-btn"  class=" btn btn-outline btn-warning text-[1rem] font-extrabold " onclick="my_modal_2.showModal()">Order <span id="payment-balance">10$</span></button>
+<dialog id="my_modal_2" class="modal">
+  <div class="modal-box">
+    <h3 class="text-3xl font-extrabold"> thanks You <i class="fa-solid fa-check text-green-500"></i></h3>
+    <p class="py-4  font-bold">Has been successful your payment <i class="fa-regular text-yellow-400 fa-face-smile"></i></p>
+    <!--  button -->
+    <div class="">
+      <form method="dialog">
+        <button class="btn btn-md hover:text-red-500 "> Close <i class="fa-solid fa-xmark"></i></button>
+      </form>
+    </div>
+  </div>
+</dialog>
+    </div>
+  </div>
+<!-- second card -->
+<div class="card  bg-gradient-to-r from-[#F4F4F4]to-[#F4F4F4]  shadow-xl p-8">
+    <figure>
+      <img
+        src="images/tea-2.png" />
+    </figure>
+    <div class="card-body justify-center">
+      <h2 class=" text-2xl font-bold">Milk Tea</h2>
+      <p>Creamer could be replaced by fresh milk</p>
+            <!-- Open the modal using ID.showModal() method -->
+<button id="second-order-btn" class=" btn btn-outline btn-warning text-[1rem] font-extrabold" onclick="my_modal_3.showModal()">Order <span id="second-payment-balance">25$</span></button>
+<dialog id="my_modal_3" class="modal">
+  <div class="modal-box">
+    <h3 class="text-3xl font-extrabold"> thanks You <i class="fa-solid fa-check text-green-500"></i></h3>
+    <p class="py-4  font-bold">Has been successful your payment <i class="fa-regular text-yellow-400 fa-face-smile"></i></p>
+    <!--  button -->
+    <div class="">
+      <form method="dialog">
+        <button class="btn btn-md hover:text-red-500 "> Close <i class="fa-solid fa-xmark"></i></button>
+      </form>
+    </div>
+  </div>
+</dialog>
+    </div>
+  </div>
+
+<!-- third card -->
+<div class="card  bg-gradient-to-r from-[#F4F4F4]to-[#F4F4F4]  shadow-xl p-8">
+    <figure>
+      <img
+        src="images/tea-3.png" />
+    </figure>
+    <div class="card-body justify-center">
+      <h2 class=" text-2xl font-bold">Milk Tea</h2>
+      <p>Creamer could be replaced by fresh milk</p>
+            <!-- Open the modal using ID.showModal() method -->
+<button id="third-order-btn" class=" btn btn-outline btn-warning text-[1rem] font-extrabold " onclick="my_modal_4.showModal()">Order <span id="third-payment-balance">40$</span></button>
+<dialog id="my_modal_4" class="modal">
+  <div class="modal-box">
+    <h3 class="text-3xl font-extrabold"> thanks You <i class="fa-solid fa-check text-green-500"></i></h3>
+    <p class="py-4  font-bold">Has been successful your payment <i class="fa-regular text-yellow-400 fa-face-smile"></i></p>
+    <!--  button -->
+    <div class="">
+      <form method="dialog">
+        <button class="btn btn-md hover:text-red-500 "> Close <i class="fa-solid fa-xmark"></i></button>
+      </form>
+    </div>
+  </div>
+</dialog>
+    </div>
+  </div>
+
+<!-- fourth card -->
+<div class="card  bg-gradient-to-r from-[#F4F4F4]to-[#F4F4F4]  shadow-xl p-8">
+    <figure>
+      <img
+        src="images/tea-4.png" />
+    </figure>
+    <div class="card-body justify-center">
+      <h2 class=" text-2xl font-bold">Milk Tea</h2>
+      <p>Creamer could be replaced by fresh milk</p>
+            <!-- Open the modal using ID.showModal() method -->
+<button id="fourth-order-btn" class=" btn btn-outline btn-warning text-[1rem] font-extrabold " onclick="my_modal_5.showModal()">Order <span id="fourth-payment-balance">15$</span></button>
+<dialog id="my_modal_5" class="modal">
+  <div class="modal-box">
+    <h3 class="text-3xl font-extrabold"> thanks You <i class="fa-solid fa-check text-green-500"></i></h3>
+    <p class="py-4  font-bold">Has been successful your payment <i class="fa-regular text-yellow-400 fa-face-smile"></i></p>
+    <!--  button -->
+    <div class="">
+      <form method="dialog">
+        <button class="btn btn-md hover:text-red-500 "> Close <i class="fa-solid fa-xmark"></i></button>
+      </form>
+    </div>
+  </div>
+</dialog>
+    </div>
+  </div>
+
+ </div>
+
+</section>
+<!-- Grid tea section -->
+<section class="my-24 gap-12 flex flex-col lg:flex-row">
+
+<div class="grid gap-8 grid-cols-1 md:grid-cols-2 flex-1">
+
+<div class="rounded-xl h-36 bg-gradient-to-r from-red-100 to-amber-100"></div>
+<div class="row-span-2 bg-[#E6A6231A] rounded-xl px-8 py-12">
+  <img src="images/fresh-1.png" alt=""></div>
+  <div class="row-span-2 bg-[#5776391A] rounded-xl px-8 py-12">
+    <img src="images/fresh-2.png" alt=""></div>
+<div class="rounded-xl h-36 bg-gradient-to-r from-[#D9D9D9] to-[#FFFFFF]"></div>
+
+</div>
+  <div class="space-y-5 flex-1">
+<h3 class="text-5xl font-extrabold">Great Tea, Freshly <br>Presented</h3>
+<p>The meaning of gong cha is chanese is to provide the best tea to emperor from all possessions . It represents the highest quality and self expectation. Establishing in 2006, Gong cha had been deeply appreciated by its custoers  because of good words of mouth and unique customized service orginated from Taiwan.</p>
+<h4 class="text-xl font-extrabold mt-8">Unique Taste</h4>
+<p>A Unique and different style from other teapots gives a luxurious and minimalist impression</p>
+<h4 class="text-xl font-extrabold">Premium Quality</h4>
+<p>Premium Quality that makes tea more elegant and more durable when you use it.</p>
+</div>
+
+</section>
+
+<!-- super client section-->
+
+<section class="my-24 rounded-xl bg-gradient-to-r from-[#FF8938] to-[#F00] px-10 lg:px-16 py-20 flex flex-col lg:flex-row gap-12">
+<div class="flex lg:pr-28 items-center">
+ <div class="space-y-5">
+  <h2 class="  text-4xl lg:text-5xl font-extrabold text-white">Meet Our Super <br>Clients</h2>
+  <p class="text-white text-sm lg:text-lg ">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+  <button class="btn bg-gradient-to-r from-indigo-300 via-purple-400 to-pink-300 ... text-white tetx-lg font-bold border-0">Show All</button>
+ </div>
+</div>
+<!-- review Container -->
+<div class="relative">
+<!-- next review -->
+<div class="lg:mb-16 z-10 lg:relative p-5 lg:p-10 lg:w-[430px] rounded-xl bg-white opacity-50">
+    <img class="lg:absolute -left-6 -top-6 border-4 border-white rounded-full" src="images/client.png" alt="">
+  <p>We are providing the best and suitable home insuranceservices for the people who are interested to treatment</p>
+  <h4 class="font-bold mt-5">Ilham Yuda</h4>
+  <p class="font-medium">Businessman</p>
+<div class="flex justify-end">
+  <img src="images/circles.png" alt="">
+
+</div>
+</div>
+<!-- current review -->
+<div class=" lg:absolute lg:top-40 z-20 lg:-left-32 lg:w-[430px] p-5 lg:p-10 rounded-xl bg-white ">
+  <img class="lg:absolute -left-6 -top-6 border-4 border-white rounded-full" src="images/client.png" alt="">
+<p>We are providing the best and suitable home insuranceservices for the people who are interested to treatment</p>
+<h4 class="font-bold mt-5">Ilham Yuda</h4>
+<p class="font-medium">Businessman</p>
+<div class="flex justify-end">
+<img src="images/circles.png" alt="">
+
+</div>
+</div>
+<!--previous review -->
+<div class=" z-10 lg:relative p-5 lg:p-10 lg:w-[430px] rounded-xl bg-white opacity-50 ">
+  <img class="lg:absolute -left-6 lg:-top-6 border-4 border-white rounded-full" src="images/client.png" alt="">
+<p>We are providing the best and suitable home insuranceservices for the people who are interested to treatment</p>
+<h4 class="font-bold mt-5">Ilham Yuda</h4>
+<p class="font-medium">Businessman</p>
+<div class="flex justify-end">
+<img src="images/circles.png" alt="">
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- news Event Section -->
+
+<section class="mb-32 mx-4 lg:mx-0">
+<h2 class="text-center text-4xl font-bold">News & Events</h2>
+<p class="text-center lg:w-[870px] mx-auto mt-3 ">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+<!-- news card container -->
+<div class=" mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+  <!-- first card -->
+  <div class="card  w-[360px] border-2 border-gray-300 py-5 ">
+    <figure>
+      <img
+        src="images/news-1.png"
+        alt="Shoes" />
+    </figure>
+    <div class="card-body">
+      <p>Feb 05, 2027</p>
+      <h2 class="card-title font-extrabold">Collecting 8 points for discount</h2>
+      <p>There are many variations of passages of Lorem Ipsum available.</p>
+      <div class="card-actions">
+        <button class="font-extrabold">Learn More</button>
+      </div>
+    </div>
+  </div>
+  <!-- second card -->
+  <div class="card  w-[360px]  border-2 border-gray-300 py-5 ">
+    <figure>
+      <img
+        src="images/news-2.png"
+        alt="Shoes" />
+    </figure>
+    <div class="card-body">
+      <p>Feb 05, 2027</p>
+      <h2 class="card-title font-extrabold">Collecting 8 points for discount</h2>
+      <p>There are many variations of passages of Lorem Ipsum available.</p>
+      <div class="card-actions">
+        <button class="font-extrabold">Learn More</button>
+      </div>
+    </div>
+  </div>
+  <!-- third card -->
+  <div class="card  w-[360px]  border-2 border-gray-300 py-5 ">
+    <figure>
+      <img
+        src="images/news-3.png"
+        alt="Shoes" />
+    </figure>
+    <div class="card-body">
+      <p>Feb 05, 2027</p>
+      <h2 class="card-title font-extrabold">Collecting 8 points for discount</h2>
+      <p>There are many variations of passages of Lorem Ipsum available.</p>
+      <div class="card-actions">
+        <button class="font-extrabold">Learn More</button>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+</main>
+<footer class="mx-auto bg-base-200 text-base-content py-10 px-20">
+  <div class="flex justify-between mb-12 mr-16">
+    <img src="images/cup.png" alt="">
+  <div class="flex items-center gap-6">
+    <p>Ready to get strated?</p>
+    <button class="btn bg-gradient-to-r from-indigo-300 via-purple-400 to-pink-300 ... border-0 text-white font-bold text-lg ">Get Started</button>
+  </div>
+
+  </div>
+<div class="footer">
+  <nav>
+    <h6 class="footer-title">Services</h6>
+    <a class="link link-hover">Branding</a>
+    <a class="link link-hover">Design</a>
+    <a class="link link-hover">Marketing</a>
+    <a class="link link-hover">Advertisement</a>
+  </nav>
+  <nav>
+    <h6 class="footer-title">Company</h6>
+    <a class="link link-hover">About us</a>
+    <a class="link link-hover">Contact</a>
+    <a class="link link-hover">Jobs</a>
+    <a class="link link-hover">Press kit</a>
+  </nav>
+  <nav>
+    <h6 class="footer-title">Legal</h6>
+    <a class="link link-hover">Terms of use</a>
+    <a class="link link-hover">Privacy policy</a>
+    <a class="link link-hover">Cookie policy</a>
+  </nav>
+  
+  <form>
+  
+    <h6 class="footer-title">Newsletter</h6>
+    <fieldset class="form-control -mr-48">
+      <label class="label">
+        <span class="label-text">Enter your email address</span>
+      </label>
+      <div class="join">
+        <input
+          type="text"
+          placeholder="username@site.com"
+          class="py-4 bg-transparent border-b-2 border-black outline-none" />
+        <button class="bg-gradient-to-r from-indigo-300 via-purple-400 to-pink-300 ...  btn text-white rounded-full "><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </fieldset>
+  </form>
+</div>
+ <div class="mt-10 text-center">
+  <p>Copyright © 18/12/2024- All right reserved by IS RA Fil Industries Ltd</p>
+ </div>
+</footer>
+
+<!-- javascript Link -->
+
+<script src="js/index.js"></script>
+
+</body>
+</html>
